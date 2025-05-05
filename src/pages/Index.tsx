@@ -1,12 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ProfessionalSummary } from "@/components/ProfessionalSummary";
+import { ExperienceSection } from "@/components/ExperienceSection";
+import { PublicationsSection } from "@/components/PublicationsSection";
+import { GrantsSection } from "@/components/GrantsSection";
+import { SupervisionSection } from "@/components/SupervisionSection";
+import { AwardsSection } from "@/components/AwardsSection";
 
 const Index = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    // Scroll to publications section when searching
+    const publicationsSection = document.getElementById("publications");
+    if (publicationsSection) {
+      publicationsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col bg-slate-50">
+      <Header onSearch={handleSearch} />
+      
+      <main className="flex-grow container mx-auto py-8 px-4">
+        <ProfessionalSummary />
+        <ExperienceSection />
+        <PublicationsSection searchQuery={searchQuery} />
+        <GrantsSection />
+        <SupervisionSection />
+        <AwardsSection />
+      </main>
+      
+      <Footer />
     </div>
   );
 };
