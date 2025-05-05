@@ -15,29 +15,36 @@ export function ExperienceSection() {
       {/* Industrial Experience */}
       <div className="mb-8">
         <h3 className="subsection-heading">Industrial Experience</h3>
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {industrialExperiences.map((exp, index) => (
-            <Card key={index} className="p-5">
-              <div className="flex flex-col md:flex-row justify-between mb-2">
-                <h4 className="font-semibold text-lg text-navy">{exp.position}</h4>
-                <span className="text-cv-secondary font-medium">{exp.dates}</span>
+            <Card key={index} className="p-5 h-full">
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <div className="flex flex-col justify-between mb-2">
+                    <h4 className="font-semibold text-lg text-navy">{exp.position}</h4>
+                    <div className="flex justify-between items-center">
+                      <span className="text-cv-primary font-medium">{exp.company}</span>
+                      <span className="text-cv-secondary text-sm">{exp.dates}</span>
+                    </div>
+                  </div>
+                  <p className="text-navy-light mb-3 text-sm">{exp.location}</p>
+                  <p className="text-navy-light mb-3">{exp.description}</p>
+                </div>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="achievements">
+                    <AccordionTrigger className="text-sm text-cv-primary">
+                      Key Achievements
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <ul className="list-disc list-inside space-y-1 pl-2">
+                        {exp.achievements.map((achievement, i) => (
+                          <li key={i} className="text-navy-light text-sm">{achievement}</li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
-              <p className="text-navy-light mb-3">{exp.company}</p>
-              <p className="text-navy-light text-sm mb-3">{exp.description}</p>
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="achievements">
-                  <AccordionTrigger className="text-sm text-cv-primary">
-                    Key Achievements
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="list-disc list-inside space-y-1 pl-2">
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="text-navy-light">{achievement}</li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
             </Card>
           ))}
         </div>
@@ -46,29 +53,36 @@ export function ExperienceSection() {
       {/* Academic Experience */}
       <div>
         <h3 className="subsection-heading">Academic Experience</h3>
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {academicExperiences.map((exp, index) => (
-            <Card key={index} className="p-5">
-              <div className="flex flex-col md:flex-row justify-between mb-2">
-                <h4 className="font-semibold text-lg text-navy">{exp.position}</h4>
-                <span className="text-cv-secondary font-medium">{exp.dates}</span>
+            <Card key={index} className="p-5 h-full">
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <div className="flex flex-col justify-between mb-2">
+                    <h4 className="font-semibold text-lg text-navy">{exp.position}</h4>
+                    <div className="flex justify-between items-center">
+                      <span className="text-cv-primary font-medium">{exp.institution}</span>
+                      <span className="text-cv-secondary text-sm">{exp.dates}</span>
+                    </div>
+                  </div>
+                  <p className="text-navy-light mb-3 text-sm">{exp.location}</p>
+                  <p className="text-navy-light mb-3">{exp.description}</p>
+                </div>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="responsibilities">
+                    <AccordionTrigger className="text-sm text-cv-primary">
+                      Responsibilities & Accomplishments
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <ul className="list-disc list-inside space-y-1 pl-2">
+                        {exp.responsibilities.map((responsibility, i) => (
+                          <li key={i} className="text-navy-light text-sm">{responsibility}</li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
-              <p className="text-navy-light mb-3">{exp.institution}</p>
-              <p className="text-navy-light text-sm mb-3">{exp.description}</p>
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="responsibilities">
-                  <AccordionTrigger className="text-sm text-cv-primary">
-                    Responsibilities & Accomplishments
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="list-disc list-inside space-y-1 pl-2">
-                      {exp.responsibilities.map((responsibility, i) => (
-                        <li key={i} className="text-navy-light">{responsibility}</li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
             </Card>
           ))}
         </div>
@@ -79,81 +93,126 @@ export function ExperienceSection() {
 
 const industrialExperiences = [
   {
-    position: "AI Research Consultant",
-    company: "TechCorp Industries",
-    dates: "2019 - Present",
-    description: "Leading AI research initiatives focused on computer vision and autonomous systems, developing cutting-edge solutions for real-world applications.",
+    position: "General Manager & Co-Founder",
+    company: "DeepNeuronic",
+    dates: "Jun. 2020 - Present",
+    location: "Portugal",
+    description: "Leading a team of 12 people in all business aspects, developing computer vision algorithms that perform in-the-wild real-time action recognition.",
     achievements: [
-      "Led a team of 5 researchers in developing novel computer vision algorithms for autonomous vehicle perception systems",
-      "Improved object detection accuracy by 18% through advanced neural network architecture design",
-      "Filed 2 patents for innovative machine learning techniques in real-time object tracking",
-      "Presented findings at industry conferences, establishing TechCorp as a leader in AI research",
+      "Secured over 2M€ in funding",
+      "Managing a team of 12 people across all business aspects",
+      "Responsible for development of computer vision algorithms",
+      "Lead the development of all sales and software strategies"
     ]
   },
   {
-    position: "Senior Machine Learning Engineer",
-    company: "DataSmart Solutions",
-    dates: "2016 - 2019",
-    description: "Designed and implemented machine learning solutions for financial fraud detection, working across teams to integrate ML with business processes.",
+    position: "Chief Technology Officer",
+    company: "CRIAM",
+    dates: "Jan. 2022 - Present",
+    location: "Portugal",
+    description: "Responsible for the software team and machine learning pipelines. Built blood-typing analysis using Computer Vision with exceptional performance.",
     achievements: [
-      "Designed and implemented production-grade machine learning pipelines for financial fraud detection",
-      "Reduced false positive rates by 35% while maintaining high recall of actual fraud cases",
-      "Mentored junior engineers and established best practices for model deployment and monitoring",
-      "Collaborated with cross-functional teams to integrate ML solutions with existing business processes"
+      "Responsible for the software team, including hardware and machine learning pipelines",
+      "Built blood-typing analysis using Computer Vision",
+      "Achieved 99.79% accuracy in real-world trials",
+      "Implemented fast classification in under 3 minutes using low-powered computation"
     ]
   },
   {
     position: "Research Scientist",
-    company: "Global AI Research Lab",
-    dates: "2012 - 2016",
-    description: "Conducted foundational research in natural language processing with a focus on developing attention mechanisms for improved language model performance.",
+    company: "Google Research",
+    dates: "Sept. 2022 - Dec. 2022",
+    location: "Zurich, Switzerland",
+    description: "Developed an on-device message retrieval model with top-5 retrieval performance and designed systems for query-message tasks.",
     achievements: [
-      "Conducted fundamental research in natural language processing techniques",
-      "Developed novel attention mechanism for language models, improving performance by 12%",
-      "Published 6 papers in top-tier conferences (ACL, EMNLP) with industry applications",
-      "Created open-source libraries for efficient NLP model training, adopted by over 500 organizations"
+      "Developed on-device message retrieval model with >70% performance",
+      "Achieved mean latency of 0.1 seconds",
+      "Designed and used LLMs to generate synthetic datasets for query-message tasks",
+      "Designed a two-tower model to map query-answers to feature space using ScaNN"
+    ]
+  },
+  {
+    position: "Machine Learning Researcher",
+    company: "Huawei Noah's Ark",
+    dates: "Mar. 2022 - Sept. 2022",
+    location: "London, United Kingdom",
+    description: "Worked on improving computer vision methods using large pre-trained models as feature extractors.",
+    achievements: [
+      "Worked on improving computer vision methods using large pre-trained models",
+      "Developed NAS-Model ZOO for autonomous combination of models",
+      "Improved current best methods' accuracy by 3.7% using neural architecture search",
+      "Created novel feature extraction methods for vision tasks"
+    ]
+  },
+  {
+    position: "Machine Learning Researcher",
+    company: "Huawei R&D Center",
+    dates: "Oct. 2021 - Jan. 2022",
+    location: "Paris, France",
+    description: "Developed anomaly detection systems using neural architecture search for time-sensitive data.",
+    achievements: [
+      "Developed anomaly detection systems using neural architecture search",
+      "Created algorithms capable of detecting 85% of 5G antennas anomalies in real-time",
+      "Implemented efficient processing for time-sensitive data",
+      "Designed novel architecture search methods for anomaly detection"
+    ]
+  },
+  {
+    position: "Computer Vision Engineer",
+    company: "Stellantis (PSA Group) & UBI",
+    dates: "Nov. 2019 - Oct. 2020",
+    location: "Covilhã, Portugal",
+    description: "Responsible for developing automated car defect detection systems using CV and building auto-classification systems.",
+    achievements: [
+      "Responsible for developing automated car defect detection systems",
+      "Built Auto-Classifier in PyTorch, complementing CNNs by automatically designing new classification components",
+      "Achieved 100% defect detection in controlled environments",
+      "Implemented real-time processing for assembly line inspection"
     ]
   }
 ];
 
 const academicExperiences = [
   {
-    position: "Associate Professor",
-    institution: "University of Technology, Department of Computer Science",
-    dates: "2018 - Present",
-    description: "Leading research in intelligent systems and teaching graduate/undergraduate courses in ML and AI. Secured significant funding for research initiatives.",
+    position: "Invited Professor",
+    institution: "University of Beira Interior",
+    dates: "Sept. 2019 - Present",
+    location: "Covilhã, Portugal",
+    description: "Responsible for practical lessons in Programming I, Functional Programming, Multimedia I, and Multimedia II courses.",
     responsibilities: [
-      "Direct the Intelligent Systems Research Group with 12 graduate students and post-docs",
-      "Secured over $1.8M in competitive research grants from NSF, NIH, and industry partners",
-      "Teach graduate and undergraduate courses in Machine Learning and AI",
-      "Serve on university research committee and departmental curriculum development team",
-      "Collaborate with medical school on AI applications for diagnostic imaging"
+      "Teaching Programming I practical lessons",
+      "Leading Functional Programming tutorials",
+      "Guiding students in Multimedia I and II projects",
+      "Developing course materials and assessments",
+      "Mentoring undergraduate students"
     ]
   },
   {
-    position: "Assistant Professor",
-    institution: "University of Technology, Department of Computer Science",
-    dates: "2012 - 2018",
-    description: "Established new research direction in explainable AI. Advised multiple PhD and Master's students while developing curriculum for AI specialization.",
+    position: "Machine Learning Engineer",
+    institution: "TEZOS & UBI",
+    dates: "Oct. 2018 - Nov. 2019",
+    location: "Covilhã, Portugal",
+    description: "Worked on the RobotChain project to automate factories using blockchain and machine learning (Master thesis project).",
     responsibilities: [
-      "Established new research direction in explainable AI for the department",
-      "Advised 8 PhD students and 15 Master's students to successful completion",
-      "Developed new curriculum for undergraduate AI specialization",
-      "Secured initial funding of $700K through early career research grants",
-      "Published 22 peer-reviewed papers in leading journals and conferences"
+      "Worked on the RobotChain project for factory automation",
+      "Developed methods leveraging blockchain and ML to detect anomalies",
+      "Created systems for people and physical space violation detection",
+      "Implemented automatic robot control mechanisms",
+      "Integrated blockchain for secure data handling"
     ]
   },
   {
-    position: "Postdoctoral Researcher",
-    institution: "National Research Institute for Artificial Intelligence",
-    dates: "2010 - 2012",
-    description: "Conducted research on reinforcement learning for robotic control and collaborated with international researchers on multi-agent systems.",
+    position: "Software Developer",
+    institution: "Instituto de Telecomunicações (IT)",
+    dates: "Oct. 2017 - Sept. 2018",
+    location: "Covilhã, Portugal",
+    description: "Optimized API and back-end implementations, reducing processing time by 80%, and developed Android applications.",
     responsibilities: [
-      "Conducted research on reinforcement learning algorithms for robotic control",
-      "Collaborated with international researchers on multi-agent systems",
-      "Mentored graduate students in research methodologies",
-      "Published 7 papers in premier AI venues (ICML, NeurIPS)",
-      "Participated in grant writing, securing $450K for continued research"
+      "Optimized API and back-end by implementing guidelines and graph algorithms",
+      "Reduced processing time by 80% using Python & Java",
+      "Developed Android application for social network analysis",
+      "Created graph entropy metrics for social networks",
+      "Published 3 research papers from this work"
     ]
   }
 ];

@@ -80,95 +80,77 @@ export function GrantsSection() {
 
 const grants: Grant[] = [
   {
-    title: "Explainable AI for Medical Diagnostics",
-    agency: "National Institutes of Health (NIH)",
+    title: "DeepNeuronic PI",
+    agency: "CENTRO-01-0247-FEDER-113023",
     role: "Principal Investigator",
-    period: "2021-2024",
-    amount: "$1,250,000",
-    description: "Developing interpretable deep learning models for medical image analysis with a focus on radiological applications.",
-    outcomes: [
-      "Created novel attention-based architecture for X-ray analysis",
-      "Reduced false negative rate by 35% compared to previous methods",
-      "Published 5 papers in top medical imaging journals",
-      "Developed open-source library for medical AI transparency"
-    ],
-    status: "ongoing",
-    progress: 65
-  },
-  {
-    title: "Privacy-Preserving Machine Learning",
-    agency: "National Science Foundation (NSF)",
-    role: "Principal Investigator",
-    period: "2019-2022",
-    amount: "$850,000",
-    description: "Researched techniques for training machine learning models on sensitive data while maintaining privacy guarantees.",
-    outcomes: [
-      "Developed federated learning approach with differential privacy",
-      "Demonstrated practical implementation in healthcare setting",
-      "Released privacy-preserving ML toolkit used by 15+ organizations",
-      "Trained 3 PhD students who secured industry research positions"
-    ],
-    status: "completed"
-  },
-  {
-    title: "Autonomous Systems Safety Verification",
-    agency: "Department of Transportation",
-    role: "Co-Principal Investigator",
     period: "2020-2023",
-    amount: "$750,000",
-    description: "Creating formal verification methods for neural network-based autonomous driving systems.",
+    amount: "522,650.22€",
+    description: "Development of an automated and autonomous CCTV action recognition system.",
     outcomes: [
-      "Built framework for safety verification of perception systems",
-      "Identified critical edge cases in existing autonomous vehicles",
-      "Collaborated with major automotive manufacturer on implementation",
-      "Presented findings to transportation safety board"
-    ],
-    status: "ongoing",
-    progress: 80
-  },
-  {
-    title: "Natural Language Understanding for Human-Robot Interaction",
-    agency: "DARPA",
-    role: "Co-Principal Investigator",
-    period: "2018-2021",
-    amount: "$1,100,000",
-    description: "Developed advanced NLP capabilities for robots to understand complex human instructions in dynamic environments.",
-    outcomes: [
-      "Created contextual language understanding system for robots",
-      "Achieved 87% accuracy in understanding ambiguous commands",
-      "Demonstrated system at DARPA Robotics Challenge",
-      "Filed 2 patents for innovation in human-robot communication"
+      "Created automated CCTV action recognition system",
+      "Implemented real-time processing for security footage",
+      "Developed custom neural architecture for action detection",
+      "Deployed solutions in real-world security environments"
     ],
     status: "completed"
   },
   {
-    title: "Industry-Academia Partnership for AI Innovation",
-    agency: "TechCorp Industries",
-    role: "Principal Investigator",
-    period: "2022-2025",
-    amount: "$950,000",
-    description: "Collaborative research program to bridge theoretical advancements with practical industrial applications of AI.",
+    title: "A1 Benchmarking CNNs for Neural Architecture Search Development",
+    agency: "CPCA/A1/468306/2021",
+    role: "Co-Principal Investigator",
+    period: "2021-2022",
+    amount: "HPC Computing (100000 CPU and 2190 GPU hours)",
+    description: "Using HPC computation to benchmark AutoML methods and neural networks.",
     outcomes: [
-      "Established joint research lab with industry partner",
-      "Created student internship pipeline with 8 placements",
-      "Developed 3 technologies being integrated into products",
-      "Organized annual industry-academia AI symposium"
+      "Benchmarked various AutoML methods",
+      "Evaluated performance across different neural network architectures",
+      "Optimized computational efficiency for neural architecture search",
+      "Published results in high-impact journals"
     ],
-    status: "ongoing",
-    progress: 35
+    status: "completed"
   },
   {
-    title: "Advanced Reinforcement Learning for Robotics",
-    agency: "Office of Naval Research",
-    role: "Senior Researcher",
-    period: "2017-2020",
-    amount: "$680,000",
-    description: "Investigated reinforcement learning techniques for robotic control in uncertain and dynamic environments.",
+    title: "A0 Benchmarking CNNs for Neural Architecture Search Development",
+    agency: "CPCA/A0/396969/2021",
+    role: "Co-Principal Investigator",
+    period: "2021-2022",
+    amount: "HPC Computing (15000 CPU and 350 GPU hours)",
+    description: "Using HPC computation to benchmark AutoML methods and neural networks.",
     outcomes: [
-      "Developed sample-efficient RL algorithms for robotic manipulation",
-      "Reduced training time by 70% while improving performance",
-      "Published influential paper with 500+ citations",
-      "Transitioned technology to practical robotic systems"
+      "Extended previous benchmarking with additional models",
+      "Analyzed computational efficiency of various architectures",
+      "Created standardized evaluation protocols",
+      "Shared results with research community"
+    ],
+    status: "completed"
+  },
+  {
+    title: "RobotChain",
+    agency: "Tezos Foundation",
+    role: "Member",
+    period: "2018-2020",
+    amount: "37k€",
+    description: "Creation and development of a blockchain, based on Tezos, for robots to be used in factories.",
+    outcomes: [
+      "Developed blockchain system for factory robots",
+      "Implemented secure communication between robotic systems",
+      "Created anomaly detection for robot operations",
+      "Demonstrated feasibility in industrial settings"
+    ],
+    status: "completed"
+  },
+  {
+    title: "μPATO: Ultimate Performance Analysis Tool",
+    agency: "UID/EEA/50008/2013",
+    role: "Member",
+    period: "2013-2015",
+    amount: "130k€",
+    description: "Innovating match analysis in team sports by generating GPS and matrix data with network metrics calculations.",
+    outcomes: [
+      "Developed tools for sports match analysis",
+      "Implemented GPS tracking and data visualization",
+      "Created network analysis for team performance",
+      "Deployed solutions for professional sports teams"
     ],
     status: "completed"
   }

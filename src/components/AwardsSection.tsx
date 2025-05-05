@@ -62,77 +62,121 @@ function AwardCard({ award }: { award: Award }) {
 
 const awards: Award[] = [
   {
-    title: "Teaching Excellence Award",
-    organization: "University of Technology",
+    title: "Smart Settlements & Urbanization",
+    organization: "World Summit Awards Portugal",
     year: "2023",
-    description: "Recognized for innovative teaching methods and outstanding student feedback.",
-    category: "academic"
-  },
-  {
-    title: "Best Paper Award",
-    organization: "Conference on Computer Vision and Pattern Recognition (CVPR)",
-    year: "2023",
-    description: "For the paper 'FastVision: Real-time Object Detection for Autonomous Vehicles'",
-    category: "academic"
-  },
-  {
-    title: "NSF CAREER Award",
-    organization: "National Science Foundation",
-    year: "2019",
-    description: "Five-year grant to support early career faculty who exemplify the role of teacher-scholars.",
-    category: "academic"
-  },
-  {
-    title: "Rising Star in AI Research",
-    organization: "AI Research Foundation",
-    year: "2018",
-    description: "Recognized as one of the top 50 early-career researchers in artificial intelligence.",
-    category: "academic"
-  },
-  {
-    title: "Outstanding Dissertation Award",
-    organization: "Special Interest Group on AI, ACM",
-    year: "2010",
-    description: "Recognition for doctoral thesis on reinforcement learning algorithms.",
-    category: "academic"
-  },
-  {
-    title: "AI Innovator of the Year",
-    organization: "TechCorp Industries",
-    year: "2021",
-    description: "For contributions to industrial applications of computer vision technology.",
+    description: "1st place out of all national projects",
     category: "industrial"
   },
   {
-    title: "IEEE Senior Member",
-    organization: "Institute of Electrical and Electronics Engineers",
-    year: "2020",
-    category: "industrial"
-  },
-  {
-    title: "Certified TensorFlow Developer",
-    organization: "Google",
-    year: "2019",
-    category: "industrial"
-  },
-  {
-    title: "Innovation Excellence Award",
-    organization: "National Association of Technology Professionals",
+    title: "Huawei and PT Academic Merit Award",
+    organization: "Huawei & Portugal Telecom",
     year: "2022",
-    category: "industrial"
+    description: "1st out of 3000 candidates",
+    category: "academic"
   },
   {
-    title: "Patent for 'Neural Network Architecture for Real-time Vision Processing'",
-    organization: "US Patent Office",
+    title: "1st Springer & ENNS Best Paper Award",
+    organization: "ICANN Conference",
     year: "2021",
-    description: "Patent #US12345678",
+    description: "For the paper 'EPE-NAS: Efficient Performance Estimation Without Training for Neural Architecture Search'",
+    category: "academic"
+  },
+  {
+    title: "PhD Fellowship",
+    organization: "Fundação para Ciência e Tecnologia",
+    year: "2020",
+    description: "10th out of 161 applicants",
+    category: "academic"
+  },
+  {
+    title: "Healthcare Solutions Innovation Award",
+    organization: "HealthCup 2020",
+    year: "2020",
+    description: "1st out of 25 teams",
     category: "industrial"
   },
   {
-    title: "Patent for 'Method for Privacy-Preserving Machine Learning'",
-    organization: "US Patent Office",
+    title: "BioHealth Hackathon Winner",
+    organization: "BioHealth Hackathon",
     year: "2020",
-    description: "Patent #US87654321",
+    description: "1st out of 50 teams",
     category: "industrial"
+  },
+  {
+    title: "Best National MSc Dissertation on Pattern Recognition",
+    organization: "APRP (Portuguese Association for Pattern Recognition)",
+    year: "2020",
+    description: "1st nationwide",
+    category: "academic"
+  },
+  {
+    title: "Best Student Award - Masters Degree",
+    organization: "University of Beira Interior",
+    year: "2019",
+    description: "1st out of 40 students",
+    category: "academic"
+  },
+  {
+    title: "Best Student Award - 1st year Masters",
+    organization: "University of Beira Interior",
+    year: "2018",
+    description: "2nd out of 55 students",
+    category: "academic"
+  },
+  {
+    title: "HealthCup 2018 Winner",
+    organization: "Healthcare Monitoring Solutions Competition",
+    year: "2018",
+    description: "1st out of 45 teams",
+    category: "industrial"
+  },
+  {
+    title: "Hack the Brain Winner",
+    organization: "Brain-Computer Interface Hackathon",
+    year: "2018",
+    description: "2nd out of 40 teams",
+    category: "industrial"
+  },
+  {
+    title: "Portuguese ACM ICPC Contest",
+    organization: "MIUP 2018",
+    year: "2018",
+    description: "Bronze medal (27th place)",
+    category: "academic"
+  },
+  {
+    title: "Best Student Award - Bachelors Conclusion",
+    organization: "University of Beira Interior",
+    year: "2017",
+    category: "academic"
+  },
+  {
+    title: "Best Student Award - 3rd year",
+    organization: "University of Beira Interior",
+    year: "2017",
+    description: "1st out of 60 students",
+    category: "academic"
+  },
+  {
+    title: "Best Student Award - 2nd year",
+    organization: "University of Beira Interior",
+    year: "2016",
+    description: "1st out of 65 students",
+    category: "academic"
+  },
+  {
+    title: "OutSystems Software Engineering Competition",
+    organization: "OutSystems",
+    year: "2016",
+    description: "1st out of 70 teams",
+    category: "industrial"
+  },
+  {
+    title: "Karate National Championships",
+    organization: "Portuguese Karate Federation",
+    year: "2006-2013",
+    description: "Multiple team and individual medals (1st, 2nd, 3rd)",
+    category: "academic"
   }
 ];

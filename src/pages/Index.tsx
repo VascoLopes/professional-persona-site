@@ -26,7 +26,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-slate-50">
       <Header onSearch={handleSearch} />
       
-      <main className="flex-grow container mx-auto py-8 px-4">
+      <main className="flex-grow container mx-auto py-8 px-4 max-w-5xl">
         <ProfessionalSummary />
         <ExperienceSection />
         <PublicationsSection searchQuery={searchQuery} />

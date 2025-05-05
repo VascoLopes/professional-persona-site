@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Github, Linkedin } from "lucide-react";
 
 export function ContactMe() {
   const [formData, setFormData] = useState({
@@ -63,8 +63,8 @@ export function ContactMe() {
                 </div>
                 <div>
                   <p className="text-sm text-navy-light">Email</p>
-                  <a href="mailto:jane.wilson@example.com" className="text-navy hover:text-cv-primary transition-colors">
-                    jane.wilson@example.com
+                  <a href="mailto:vascoferrinholopes@gmail.com" className="text-navy hover:text-cv-primary transition-colors">
+                    vascoferrinholopes@gmail.com
                   </a>
                 </div>
               </div>
@@ -75,8 +75,32 @@ export function ContactMe() {
                 </div>
                 <div>
                   <p className="text-sm text-navy-light">Phone</p>
-                  <a href="tel:+11234567890" className="text-navy hover:text-cv-primary transition-colors">
-                    +1 (123) 456-7890
+                  <a href="tel:+351926472722" className="text-navy hover:text-cv-primary transition-colors">
+                    +351 926472722
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="bg-cv-primary/10 p-2 rounded-full">
+                  <Linkedin className="h-5 w-5 text-cv-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-navy-light">LinkedIn</p>
+                  <a href="https://linkedin.com/in/vasco-lopes" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-cv-primary transition-colors">
+                    linkedin.com/in/vasco-lopes
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="bg-cv-primary/10 p-2 rounded-full">
+                  <Github className="h-5 w-5 text-cv-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-navy-light">GitHub</p>
+                  <a href="https://github.com/VascoLopes" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-cv-primary transition-colors">
+                    github.com/VascoLopes
                   </a>
                 </div>
               </div>
@@ -84,14 +108,14 @@ export function ContactMe() {
           </Card>
           
           <Card className="p-6">
-            <h3 className="font-semibold text-lg text-navy mb-4">Office Hours</h3>
-            <p className="text-navy-light mb-2">Monday - Friday</p>
-            <p className="text-navy">10:00 AM - 4:00 PM</p>
-            <p className="text-navy-light mt-4 mb-2">Address</p>
-            <p className="text-navy">Department of Computer Science</p>
-            <p className="text-navy">University of Technology</p>
-            <p className="text-navy">1234 Academic Avenue</p>
-            <p className="text-navy">Tech City, TC 12345</p>
+            <h3 className="font-semibold text-lg text-navy mb-4">Location</h3>
+            <p className="text-navy-light mb-2">Based in</p>
+            <p className="text-navy">Portugal</p>
+            <p className="text-navy-light mt-4 mb-2">Available for</p>
+            <p className="text-navy">Remote work</p>
+            <p className="text-navy">Consulting opportunities</p>
+            <p className="text-navy">Research collaborations</p>
+            <p className="text-navy">Guest lectures</p>
           </Card>
         </div>
         
