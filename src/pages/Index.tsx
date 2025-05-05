@@ -8,6 +8,7 @@ import { PublicationsSection } from "@/components/PublicationsSection";
 import { GrantsSection } from "@/components/GrantsSection";
 import { SupervisionSection } from "@/components/SupervisionSection";
 import { AwardsSection } from "@/components/AwardsSection";
+import { ContactMe } from "@/components/ContactMe";
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -32,6 +33,7 @@ const Index = () => {
         <GrantsSection />
         <SupervisionSection />
         <AwardsSection />
+        <ContactMe />
       </main>
       
       <Footer />

@@ -23,6 +23,7 @@ export function ExperienceSection() {
                 <span className="text-cv-secondary font-medium">{exp.dates}</span>
               </div>
               <p className="text-navy-light mb-3">{exp.company}</p>
+              <p className="text-navy-light text-sm mb-3">{exp.description}</p>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="achievements">
                   <AccordionTrigger className="text-sm text-cv-primary">
@@ -53,6 +54,7 @@ export function ExperienceSection() {
                 <span className="text-cv-secondary font-medium">{exp.dates}</span>
               </div>
               <p className="text-navy-light mb-3">{exp.institution}</p>
+              <p className="text-navy-light text-sm mb-3">{exp.description}</p>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="responsibilities">
                   <AccordionTrigger className="text-sm text-cv-primary">
@@ -80,6 +82,7 @@ const industrialExperiences = [
     position: "AI Research Consultant",
     company: "TechCorp Industries",
     dates: "2019 - Present",
+    description: "Leading AI research initiatives focused on computer vision and autonomous systems, developing cutting-edge solutions for real-world applications.",
     achievements: [
       "Led a team of 5 researchers in developing novel computer vision algorithms for autonomous vehicle perception systems",
       "Improved object detection accuracy by 18% through advanced neural network architecture design",
@@ -91,6 +94,7 @@ const industrialExperiences = [
     position: "Senior Machine Learning Engineer",
     company: "DataSmart Solutions",
     dates: "2016 - 2019",
+    description: "Designed and implemented machine learning solutions for financial fraud detection, working across teams to integrate ML with business processes.",
     achievements: [
       "Designed and implemented production-grade machine learning pipelines for financial fraud detection",
       "Reduced false positive rates by 35% while maintaining high recall of actual fraud cases",
@@ -102,6 +106,7 @@ const industrialExperiences = [
     position: "Research Scientist",
     company: "Global AI Research Lab",
     dates: "2012 - 2016",
+    description: "Conducted foundational research in natural language processing with a focus on developing attention mechanisms for improved language model performance.",
     achievements: [
       "Conducted fundamental research in natural language processing techniques",
       "Developed novel attention mechanism for language models, improving performance by 12%",
@@ -116,6 +121,7 @@ const academicExperiences = [
     position: "Associate Professor",
     institution: "University of Technology, Department of Computer Science",
     dates: "2018 - Present",
+    description: "Leading research in intelligent systems and teaching graduate/undergraduate courses in ML and AI. Secured significant funding for research initiatives.",
     responsibilities: [
       "Direct the Intelligent Systems Research Group with 12 graduate students and post-docs",
       "Secured over $1.8M in competitive research grants from NSF, NIH, and industry partners",
@@ -128,6 +134,7 @@ const academicExperiences = [
     position: "Assistant Professor",
     institution: "University of Technology, Department of Computer Science",
     dates: "2012 - 2018",
+    description: "Established new research direction in explainable AI. Advised multiple PhD and Master's students while developing curriculum for AI specialization.",
     responsibilities: [
       "Established new research direction in explainable AI for the department",
       "Advised 8 PhD students and 15 Master's students to successful completion",
@@ -140,6 +147,7 @@ const academicExperiences = [
     position: "Postdoctoral Researcher",
     institution: "National Research Institute for Artificial Intelligence",
     dates: "2010 - 2012",
+    description: "Conducted research on reinforcement learning for robotic control and collaborated with international researchers on multi-agent systems.",
     responsibilities: [
       "Conducted research on reinforcement learning algorithms for robotic control",
       "Collaborated with international researchers on multi-agent systems",

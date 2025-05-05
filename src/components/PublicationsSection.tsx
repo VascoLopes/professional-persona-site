@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Star } from "lucide-react";
 
 type PublicationType = "journal" | "conference" | "all";
 
@@ -25,6 +26,7 @@ interface Publication {
   doi: string;
   abstract: string;
   impactFactor?: number;
+  featured?: boolean;
 }
 
 interface PublicationsSectionProps {
@@ -122,13 +124,21 @@ function PublicationCard({ publication }: { publication: Publication }) {
   const [showAbstract, setShowAbstract] = useState(false);
   
   return (
-    <Card className="animate-fade-in">
+    <Card className={`animate-fade-in ${publication.featured ? 'border-cv-primary border-2' : ''}`}>
       <CardHeader>
         <div className="flex justify-between items-start">
           <div>
-            <Badge variant={publication.type === "journal" ? "default" : "outline"} className="mb-2">
-              {publication.type === "journal" ? "Journal Article" : "Conference Paper"}
-            </Badge>
+            <div className="flex items-center gap-2 mb-2">
+              <Badge variant={publication.type === "journal" ? "default" : "outline"}>
+                {publication.type === "journal" ? "Journal Article" : "Conference Paper"}
+              </Badge>
+              {publication.featured && (
+                <div className="flex items-center gap-1 text-cv-primary">
+                  <Star size={16} className="fill-cv-primary" />
+                  <span className="text-xs font-medium">Featured</span>
+                </div>
+              )}
+            </div>
             <CardTitle className="text-lg">{publication.title}</CardTitle>
             <CardDescription className="mt-1">{publication.authors}</CardDescription>
           </div>
@@ -185,7 +195,8 @@ const publications: Publication[] = [
     citation: "Wilson, J., Smith, A., Johnson, R., & Brown, T. (2023). Explainable Deep Learning for Medical Image Analysis: A Comprehensive Review. Journal of Medical AI, 45(3), 234-251.",
     doi: "10.1234/jmai.2023.45.3.234",
     abstract: "This paper provides a comprehensive review of explainable AI methods for medical image analysis. We categorize existing approaches, analyze their strengths and limitations, and propose a framework for evaluating explainability in clinical settings. Our analysis shows that while significant progress has been made, substantial challenges remain in creating truly interpretable models for critical healthcare applications.",
-    impactFactor: 4.8
+    impactFactor: 4.8,
+    featured: true
   },
   {
     id: 2,
@@ -196,7 +207,8 @@ const publications: Publication[] = [
     year: 2023,
     citation: "Wilson, J., Zhang, L., & Martinez, E. (2023). FastVision: Real-time Object Detection for Autonomous Vehicles Using Optimized Neural Architectures. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 4567-4576.",
     doi: "10.1109/cvpr.2023.457",
-    abstract: "We present FastVision, a novel neural architecture optimized for real-time object detection in autonomous driving scenarios. Our approach achieves state-of-the-art accuracy while maintaining inference times under 15ms on standard hardware. Through comprehensive ablation studies and real-world testing in diverse conditions, we demonstrate robust performance improvements over existing methods, particularly in adverse weather and lighting situations."
+    abstract: "We present FastVision, a novel neural architecture optimized for real-time object detection in autonomous driving scenarios. Our approach achieves state-of-the-art accuracy while maintaining inference times under 15ms on standard hardware. Through comprehensive ablation studies and real-world testing in diverse conditions, we demonstrate robust performance improvements over existing methods, particularly in adverse weather and lighting situations.",
+    featured: true
   },
   {
     id: 3,
