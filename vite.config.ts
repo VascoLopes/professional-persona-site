@@ -19,4 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/vasco-lopes/' // Replace with your GitHub repo name
 }));
